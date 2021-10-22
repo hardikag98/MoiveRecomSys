@@ -1,7 +1,7 @@
 # Moive Recommendation System
 Create a movie recommendation system using latent factor models, neighbourhood methods and content based methods on MovieLens data
 
-This project experiments with several different approaches (Content-based methods, neighborhood methods and latent factor models) to build a movie recommender system based on data from MovieLens. The recommender systems are trained on a set of movie ratings (and on metadata ofthe movies in cases of content based methods) by different users and is then used to predict how these users will like movies which they have not yet seen/rated by predicting what the users will rate these movies. All approaches are evaluated on their predicted ratings. The evaluation metric used is Root Mean Square Error (RMSE).
+This project experiments with several different approaches (Content-based methods, neighborhood methods, latent factor models and ensemble models) to build a movie recommender system based on data from MovieLens. The recommender systems are trained on a set of movie ratings (and on metadata of the movies in cases of content based methods) by different users and is then used to predict how these users will like movies which they have not yet seen/rated by predicting what the users will rate these movies. All approaches are evaluated on their predicted ratings. The evaluation metric used is Root Mean Square Error (RMSE).
 
 ## DATA DESCRIPTION:
 
