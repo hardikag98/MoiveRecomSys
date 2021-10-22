@@ -63,6 +63,7 @@ F_iw=〖tf〗_iw* 〖idf〗_w
 From there, we compute an affinity factor between movies i and j in the form of Cosine Similarity s and obtain a I x I Affinity Matrix. We then use these similarities as weights to predict user ratings with the idea that if movie X was rated 5 by a specific user and is very similar to Y, chances are the user will rate it high as well. [Source: Building the optimal Book Recommender and measuring the role of Book Covers in predicting user ratings by Cécile Logé and Alexander Yoffe]
 ![image](https://user-images.githubusercontent.com/59964344/138457813-3b44679f-f1ee-4eb7-99d8-5b4a6e959cee.png)
 
-〖 r ̂〗_ui=b_(ui )+  (∑_(〖v ∈ I〗_u)▒〖〖(r〗_uv-b_ui)〗 s_iv)/(∑_(〖v ∈ I〗_u)▒s_iv )
+![image](https://user-images.githubusercontent.com/59964344/138458425-f5b13c74-21c5-4da6-911d-f11a6ff1965c.png)
+
 where Iv is the list of movies user u already rated, meaning predicted ratings are weighted averages of known ratings from the training set.
 This methodology was implemented using the ‘description’ column of our metadata which contains the ‘overview’ (brief textual description/summary of the movie) plus the ‘tagline’ column. Another model with a slightly different methodology was implemented using the ‘genre’, ’keywords’ and ‘cast’ column (which were combined to create the ‘metadata’ column) where instead of tf-idf the data was one hot encoded, i.e., a separate columns was created for each genre and cast member (which appeared more than once in the data) and the value under those columns (0/1) represented if that genre/cast member was a feature of that particular movie. Following this the same methodology of computing an affinity factor between movies in form of cosine similarity and then using that predict ratings was used.
